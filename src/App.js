@@ -13,6 +13,7 @@ function App() {
           5w
         </p>
       </header>
+      <div className="container">
       <div className="td-entry">
         <h2>To-Do</h2>
         
@@ -22,6 +23,7 @@ function App() {
       <ListTodos/>
 
 
+    </div>
     </div>
     </Fragment>
   );
