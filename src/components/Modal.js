@@ -5,29 +5,55 @@ import 'bootstrap/dist/css/bootstrap.css';
 
 
 
-const Example = () => {
+const Edit = ({ todo }) => {
+    const [description, setDescription] = useState(todo.description);
     const [show, setShow] = useState(false);
   
-    const handleClose = () => setShow(false);
+    const handleClose = async e => {
+        e.preventDefault();
+        try {
+            const body = { description };
+            const response = await fetch(
+              `http://localhost:5000/todos/${todo.todo_id}`,
+              {
+                method: "PUT",
+                headers: { "Content-Type": "application/json" },
+                body: JSON.stringify(body)
+              }
+            );
+            setShow(false);
+      
+            window.location = "/";
+          } catch (err) {
+            console.error(err.message);
+          }
+        };
+        
+        
+        
     const handleShow = () => setShow(true);
   
     return (
       <Fragment>
         <Button variant="primary" onClick={handleShow}>
-          Launch demo modal
+          Edit
         </Button>
   
         <Modal show={show} onHide={handleClose}>
-          <Modal.Header closeButton>
-            <Modal.Title>Modal heading</Modal.Title>
+          <Modal.Header>
+            <Modal.Title>Edit your todo</Modal.Title>
           </Modal.Header>
-          <Modal.Body>Woohoo, you're reading this text in a modal!</Modal.Body>
+          <Modal.Body>
+          <input
+                type="text"
+                className="form-control"
+                value={description}
+                onChange={e => setDescription(e.target.value)}
+              />
+              </Modal.Body>
           <Modal.Footer>
             <Button variant="secondary" onClick={handleClose}>
               Close
-            </Button>
-            <Button variant="primary" onClick={handleClose}>
-              Save Changes
             </Button>
           </Modal.Footer>
         </Modal>
@@ -35,4 +61,4 @@ const Example = () => {
     );
   }
   
-export default Example;
+export default Edit;

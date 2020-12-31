@@ -1,6 +1,6 @@
 import React, { Fragment, useEffect, useState } from "react";
 
-import EditTodo from "./EditTodo";
+import Edit from './Modal';
 
 const ListTodos = () => {
   const [todos, setTodos] = useState([]);
@@ -57,7 +57,7 @@ const ListTodos = () => {
             <tr key={todo.todo_id}>
               <td>{todo.description}</td>
               <td>
-                {/*<EditTodo todo={todo} />*/}
+                <Edit todo={todo} />
               </td>
               <td>
                 <button

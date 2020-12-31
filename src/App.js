@@ -22,7 +22,7 @@ function App() {
 
       <InputTodo/>
       <ListTodos/>
-      <Example/>
+      
 
 
     </div>
