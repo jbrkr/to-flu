@@ -10,7 +10,6 @@ const Edit = ({ todo }) => {
     const [show, setShow] = useState(false);
   
     const handleClose = async e => {
-        e.preventDefault();
         try {
             const body = { description };
             const response = await fetch(
@@ -35,7 +34,7 @@ const Edit = ({ todo }) => {
   
     return (
       <Fragment>
-        <Button variant="primary" onClick={handleShow}>
+        <Button onClick={handleShow}>
           Edit
         </Button>
   
@@ -52,7 +51,7 @@ const Edit = ({ todo }) => {
               />
               </Modal.Body>
           <Modal.Footer>
-            <Button variant="secondary" onClick={handleClose}>
+            <Button onClick={handleClose}>
               Close
             </Button>
           </Modal.Footer>

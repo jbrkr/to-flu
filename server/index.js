@@ -9,7 +9,27 @@ app.use(express.json()); //req.body
 
 //ROUTES//
 
-//create a todo
+//create a quick todo
+
+
+
+//create a full todo
+app.post("/todos", async (req, res) => {
+  try {
+    const description = req.body.description;
+    const due_date = req.body.due_date;
+    const recipient = req.body.recipient;
+    const newFullTodo = await pool.query(
+      "INSERT INTO todo (description, due_date, recipient) VALUES($1, $2, $3) RETURNING *",
+      [description, due_date, recipient]
+    );
+
+    res.json(newFullTodo.rows[0]);
+    console.log(res);
+  } catch (err) {
+    console.error(err.message);
+  }
+});
 
 app.post("/todos", async (req, res) => {
   try {
@@ -24,6 +44,7 @@ app.post("/todos", async (req, res) => {
     console.error(err.message);
   }
 });
+
 
 //get all todos
 
