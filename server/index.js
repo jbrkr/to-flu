@@ -36,7 +36,7 @@ app.get("/todos", async(req, res) => {
     } catch (err) {
         console.error(err.message)
     }
-})
+});
 
 //pull specific todo
 
@@ -51,7 +51,7 @@ app.get("/todos/:id", async (req, res) => {
     } catch (err) {
         console.error(err.message)
     }
-})
+});
 
 //update a current todo
 
@@ -69,7 +69,7 @@ app.put("/todos/:id", async (req, res) => {
         console.error(err.message)
         
     }
-})
+});
 
 
 //delete a todo
