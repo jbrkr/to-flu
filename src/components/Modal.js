@@ -7,17 +7,23 @@ import 'bootstrap/dist/css/bootstrap.css';
 
 const Edit = ({ todo }) => {
     const [description, setDescription] = useState(todo.description);
+    const [recipient, setRecipient] = useState(todo.recipient);
+    const [due_date, setDueDate] = useState(todo.due_date);
     const [show, setShow] = useState(false);
   
     const handleClose = async e => {
         try {
-            const body = { description };
+            {/*const body = { description };*/}
             const response = await fetch(
               `http://localhost:5000/todos/${todo.todo_id}`,
               {
                 method: "PUT",
                 headers: { "Content-Type": "application/json" },
-                body: JSON.stringify(body)
+                body: JSON.stringify({
+                    description,
+                    due_date,
+                    recipient
+                  })
               }
             );
             setShow(false);
@@ -46,8 +52,26 @@ const Edit = ({ todo }) => {
           <input
                 type="text"
                 className="form-control"
+                name="description"
+                id="description"
                 value={description}
                 onChange={e => setDescription(e.target.value)}
+              />
+            <input
+                type="date"
+                className="form-control"
+                name="due_date"
+                id="due_date"
+                value={due_date}
+                onChange={e => setDueDate(e.target.value)}
+              />
+              <input
+                type="text"
+                className="form-control"
+                name="recipient"
+                id="recipient"
+                value={recipient}
+                onChange={e => setRecipient(e.target.value)}
               />
               </Modal.Body>
           <Modal.Footer>
