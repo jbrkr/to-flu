@@ -2,6 +2,7 @@ import React, {Fragment} from 'react';
 import './styling/App.css';
 
 import InputTodo from './components/InputTodo';
+import ListTodos from './components/ListTodo';
 
 function App() {
   return (
@@ -18,6 +19,7 @@ function App() {
       </div>
 
       <InputTodo/>
+      <ListTodos/>
 
 
     </div>
