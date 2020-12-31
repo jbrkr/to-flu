@@ -3,6 +3,7 @@ import './styling/App.css';
 
 import InputTodo from './components/InputTodo';
 import ListTodos from './components/ListTodo';
+import Example from './components/Modal';
 
 function App() {
   return (
@@ -21,6 +22,7 @@ function App() {
 
       <InputTodo/>
       <ListTodos/>
+      <Example/>
 
 
     </div>

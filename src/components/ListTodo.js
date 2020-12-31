@@ -57,7 +57,7 @@ const ListTodos = () => {
             <tr key={todo.todo_id}>
               <td>{todo.description}</td>
               <td>
-                <EditTodo todo={todo} />
+                {/*<EditTodo todo={todo} />*/}
               </td>
               <td>
                 <button
