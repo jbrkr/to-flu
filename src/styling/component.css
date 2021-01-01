@@ -1,3 +1,23 @@
-.buttonX {
+@import url("fonts.css");
+
+.buttonX, button {
+    background-color: transparent !important;
+    border: 2px solid white !important;
+    border-radius: 0px !important;
+    color: white;
+}
+
+.tdl, tr {
+    text-align: justify;
+    border: 1px solid black;
     
+    min-height: 100vh;
+    min-width: 100vw;
+
+    font-family: 'Untitled Sans';
+    color: white;
+}
+
+table {
+    border: 1px solid black;
 }

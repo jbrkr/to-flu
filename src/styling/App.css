@@ -1,8 +1,20 @@
+@import url("fonts.css");
+
 .App {
+  margin: 0;
+  padding: 0;
   text-align: center;
-  background-color: #61dafb;
+  background-color: #000000;
   min-height: 100vh;
+  min-width: 100vw;
+  height: 100%;
+  width: 100%;
+  cursor: crosshair;
+  color: white;
+  font-family: 'LexiconNo2 RomanA-Txt';
 }
+
+
 
 .App-logo {
   height: 5vmin;

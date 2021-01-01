@@ -2,7 +2,7 @@ import React, { Fragment, useState, setShow } from 'react';
 import Modal from 'react-bootstrap/Modal';
 import Button from 'react-bootstrap/Button';
 import 'bootstrap/dist/css/bootstrap.css';
-
+import '../styling/component.css';
 
 
 const Edit = ({ todo }) => {
@@ -40,7 +40,7 @@ const Edit = ({ todo }) => {
   
     return (
       <Fragment>
-        <Button onClick={handleShow}>
+        <Button className={"buttonX"} onClick={handleShow}>
           Edit
         </Button>
   

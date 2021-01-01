@@ -11,11 +11,11 @@ function App() {
     <div className="App">
       <header className="App-header">
         <p>
-          5w
+          3W
         </p>
       </header>
-      <div className="container">
-      <div className="td-entry">
+      <div>
+      <div>
         <h2>To-Do</h2>
         
       </div>
