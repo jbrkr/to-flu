@@ -1,0 +1,49 @@
+@font-face {    font-family: 'GT America Trial Rg';
+    src: url('typefaces/GT-America-Standard-Regular-Trial.otf') format('opentype');
+    font-weight: normal;
+    font-style: normal
+}
+
+@font-face {
+    font-family: 'Swis721 BT Roman';
+    src: url('typefaces/Swis721 BT Roman.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal
+}
+
+
+@font-face {    font-family: 'Neue Haas Unica Pro Light';
+    src: url('typefaces/NeueHaasUnicaPro-Light.otf') format('opentype');
+    font-weight: normal;
+    font-style: normal
+}
+
+@font-face {
+    font-family: 'LexiconNo2 RomanA-Txt';
+    src: url('typefaces/Lexicon Number 2 Roman A.TTF') format('truetype');
+    font-weight: normal;
+    font-style: normal
+}
+
+@font-face {    font-family: 'Untitled Sans';
+    src: url('typefaces/UntitledSans-Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal
+}
+
+@font-face {
+    font-family: 'GT Sectra Display Trial Regular';
+    src: url('typefaces/GT-Sectra-Display-Regular-Trial.otf') format('opentype');
+    font-weight: normal;
+    font-style: normal
+}
+
+
+@font-face {
+    font-family: 'Heldane Text Regular';
+    src: url('typefaces/Heldane_Text_Regular.otf') format('opentype');
+    font-weight: normal;
+    font-style: normal
+}
+
+

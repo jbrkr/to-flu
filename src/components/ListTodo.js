@@ -1,4 +1,5 @@
 import React, { Fragment, useEffect, useState } from "react";
+import '../styling/component.css';
 
 import Edit from './Modal';
 
@@ -39,12 +40,19 @@ const ListTodos = () => {
   return (
     <Fragment>
       {" "}
-      <table class="table mt-5 text-center">
+      <table id={"tdl"} className={"tdl"} class="table">
+      <colgroup>
+          <col style={{width:"35%"}}/>
+	        <col style={{width:"25%"}}/>
+	        <col style={{width:"20%"}}/>
+          <col style={{width:"10%"}}/>
+	        <col style={{width:"10%"}}/>
+          </colgroup>
         <thead>
-          <tr>
+          <tr style={{borderColor: "black"}}>
             <th>What</th>
             <th>When</th>
-            <th>For Who</th>
+            <th>For Whom</th>
             <th>Edit</th>
             <th>Delete</th>
           </tr>
@@ -56,7 +64,7 @@ const ListTodos = () => {
             <td>john@example.com</td>
           </tr> */}
           {todos.map(todo => (
-            <tr key={todo.todo_id}>
+            <tr key={todo.todo_id}  style={{borderColor: "black"}}>
               <td>{todo.description}</td>
               <td>{todo.due_date}</td>
               <td>{todo.recipient}</td>
@@ -65,10 +73,10 @@ const ListTodos = () => {
               </td>
               <td>
                 <button
-                  className="btn btn-danger"
+                   className={"buttonX"} 
                   onClick={() => deleteTodo(todo.todo_id)}
                 >
-                  Delete
+                  X
                 </button>
               </td>
             </tr>

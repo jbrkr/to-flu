@@ -6,5 +6,5 @@ CREATE TABLE todo(
 );
 
 ALTER TABLE todo
-ADD COLUMN due_date date,
+ADD COLUMN due_date DATE,
 ADD COLUMN recipient VARCHAR(30);

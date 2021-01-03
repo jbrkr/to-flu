@@ -1,4 +1,6 @@
 import React, { Fragment, useState } from "react";
+import '../styling/component.css';
+
 
 const InputTodo = () => {
   const [description, setDescription] = useState("");
@@ -36,6 +38,7 @@ const InputTodo = () => {
           id="description"
           value={description}
           onChange={e => setDescription(e.target.value)}
+          placeholder="What"
         />
         <input
           type="date"
@@ -43,6 +46,7 @@ const InputTodo = () => {
           id="due_date"
           value={due_date}
           onChange={e => setDueDate(e.target.value)}
+          placeholder="When"
         />
         <input
           type="text"
@@ -50,8 +54,9 @@ const InputTodo = () => {
           id="recipient"
           value={recipient}
           onChange={e => setRecipient(e.target.value)}
+          placeholder="For Whom  "
         />
-        <button>Add</button>
+        <button className={"buttonX"} >Add</button>
       </form>
     </Fragment>
   );

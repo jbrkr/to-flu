@@ -1,18 +1,34 @@
-# Getting Started with Create React App
+# README
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-## Available Scripts
 
-In the project directory, you can run:
+## Run - Backend
 
+In the 'server' directory, run:
+
+### `nodemon index`
+Runs the server on port 5000
+
+
+## Run - Frontend
+
+In the project directory, run:
+
+### `yarn`
 ### `yarn start`
 
-Runs the app in the development mode.\
+Runs the app in the development mode.
 Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
 
-The page will reload if you make edits.\
+The page will reload if you make edits.
 You will also see any lint errors in the console.
+
+
+# To add
+
+
+
 
 ### `yarn test`
 
