@@ -66,7 +66,7 @@ const ListTodos = () => {
           {todos.map(todo => (
             <tr key={todo.todo_id}  style={{borderColor: "black"}}>
               <td>{todo.description}</td>
-              <td>{todo.due_date}</td>
+              <td>{String(todo.due_date).split('T')[0]}</td>
               <td>{todo.recipient}</td>
               <td>
                 <Edit todo={todo} />
