@@ -27,6 +27,8 @@ const Edit = ({ todo }) => {
               }
             );
             setShow(false);
+            const data = await response.json();
+            console.log(data);
       
             window.location = "/";
           } catch (err) {
@@ -41,14 +43,14 @@ const Edit = ({ todo }) => {
     return (
       <Fragment>
         <Button className={"buttonX"} onClick={handleShow}>
-          Edit
+          //
         </Button>
   
         <Modal show={show} onHide={handleClose}>
-          <Modal.Header>
+          <Modal.Header className={"editorModal"}>
             <Modal.Title>Edit your todo</Modal.Title>
           </Modal.Header>
-          <Modal.Body>
+          <Modal.Body className={"editorModal"} >
           <input
                 type="text"
                 className="form-control"
@@ -74,8 +76,8 @@ const Edit = ({ todo }) => {
                 onChange={e => setRecipient(e.target.value)}
               />
               </Modal.Body>
-          <Modal.Footer>
-            <Button onClick={handleClose}>
+          <Modal.Footer className={"editorModal"} >
+            <Button className={"buttonX"} onClick={handleClose}>
               Close
             </Button>
           </Modal.Footer>

@@ -76,11 +76,13 @@ app.get("/todos/:id", async (req, res) => {
 
 app.put("/todos/:id", async (req, res) => {
   try {
-    const { id } = req.params;
-    const { description } = req.body;
+    const {id}  = req.params;
+    const description = req.body.description;
+    const due_date = req.body.due_date;
+    const recipient = req.body.recipient;
     const updateTodo = await pool.query(
-      "UPDATE todo SET description = $1 WHERE todo_id = $2",
-      [description, id]
+      "UPDATE todo SET description = $1, due_date = $2, recipient = $3 WHERE todo_id = $4",
+      [description, due_date, recipient, id]
     );
 
     res.json("Todo was updated!");

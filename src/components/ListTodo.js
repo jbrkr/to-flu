@@ -41,11 +41,18 @@ const ListTodos = () => {
     <Fragment>
       {" "}
       <table id={"tdl"} className={"tdl"} class="table">
+      <colgroup>
+          <col style={{width:"35%"}}/>
+	        <col style={{width:"25%"}}/>
+	        <col style={{width:"20%"}}/>
+          <col style={{width:"10%"}}/>
+	        <col style={{width:"10%"}}/>
+          </colgroup>
         <thead>
           <tr style={{borderColor: "black"}}>
             <th>What</th>
             <th>When</th>
-            <th>For Who</th>
+            <th>For Whom</th>
             <th>Edit</th>
             <th>Delete</th>
           </tr>
@@ -69,7 +76,7 @@ const ListTodos = () => {
                    className={"buttonX"} 
                   onClick={() => deleteTodo(todo.todo_id)}
                 >
-                  Delete
+                  X
                 </button>
               </td>
             </tr>
