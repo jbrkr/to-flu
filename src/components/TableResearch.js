@@ -64,8 +64,8 @@ import '../styling/compstyles.scss';
               <th>Topic</th>
               <th>Subject</th>
               <th>Project</th>
-              <th>Complete</th>
-              <th>Delete</th>
+              <th></th>
+              <th></th>
             </tr>
           </thead>
           <tbody>

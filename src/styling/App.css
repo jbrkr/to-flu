@@ -32,6 +32,7 @@ h1 {
 
 ::selection{
   background-color: black; /*rgba(253, 196, 170, 0.637)*/
+  color: white;
 }
 
 .App-header {
