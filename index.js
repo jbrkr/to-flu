@@ -8,15 +8,12 @@ const PORT = process.env.PORT || 5000;
 app.use(cors());
 app.use(express.json()); //req.body
 
-//app.use(express.static(path.join(__dirname, 'client/build')));
-app.use(express.static("./src"));
 
 if(process.env.NODE_ENV === 'production') {
-  app.use(express.static(path.join(__dirname, 'src')));
+  app.use(express.static(path.join(__dirname, 'client/build')));
 }
 
 console.log(__dirname);
-console.log(path.join(__dirname, 'src'));
 //ROUTES//
 
 //create a quick todo
@@ -210,9 +207,6 @@ app.delete("/res/:id", async (req, res) => {
   }
 });
 
-app.get("*", (req, res) => {
-  res.sendFile(path.join(__dirname, "public/index.html"));
-});
 
 app.listen(PORT, () => {
   console.log(`server has started on port ${PORT}`);

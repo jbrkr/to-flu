@@ -15,7 +15,7 @@ const Edit = ({ todo }) => {
         try {
             {/*const body = { description };*/}
             const response = await fetch(
-              `ec2-52-22-135-159.compute-1.amazonaws.com/todos/${todo.todo_id}`,
+              `https://toflu.herokuapp.com/todos/${todo.todo_id}`,
               {
                 method: "PUT",
                 headers: { "Content-Type": "application/json" },

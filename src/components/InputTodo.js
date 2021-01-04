@@ -24,7 +24,7 @@ const InputTodo = () => {
     e.preventDefault();
     try {
 
-      const response = await fetch("ec2-52-22-135-159.compute-1.amazonaws.com/todos", {
+      const response = await fetch("https://toflu.herokuapp.com/todos", {
         method: "POST",
         headers: { "content-type": "application/json" },
         body: JSON.stringify({
