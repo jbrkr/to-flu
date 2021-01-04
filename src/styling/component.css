@@ -5,7 +5,16 @@
     border: 2px solid white !important;
     border-radius: 0px !important;
     color: white;
+    cursor: url("hovercursor.png"), auto !important;
 }
+
+button:hover {
+    background-color: white !important;
+    border-radius: 0px !important;
+    color: black !important;
+    
+}
+
 
 .editorModal {
     background-color: black;
@@ -15,38 +24,65 @@
 
 .tdl, tr {
     text-align: justify;
-    border: 1px solid black;
     min-height: 100vh;
     font-family: 'Untitled Sans';
     color: white;
-}
-
-table {
-    align-items: center;
-    align-content: center;
-    border: 1px solid black;
-    min-width: 50vw;
-    max-width: 50vw;
-    width: 50vw;
 }
 
 h1 {
     font-size: 3em !important;
   }
 
-  input[type=text] {
+::placeholder {
+    color: white;
+    text-decoration: underline;
+}
+
+.selectorPlaceholder {
+    color: white !important;
+    text-decoration: underline !important;
+}
+
+input[type=text] {
       background-color: transparent !important;
       color: white;
+      height: 2.5em;
+      width: 4em;
+      cursor: url("hovercursor.png"), auto !important;
+      border: none !important;
   }
 
-  input[type=date] {
+input[type=date] {
     background-color: transparent !important;
     color: white;
+    height: 2.5em;
+    width: 9em;
+    cursor: url("hovercursor.png"), auto !important;
+    text-decoration: underline !important;
+    border: none !important;
+}
+
+::-webkit-calendar-picker-indicator {
+    filter: invert(1);
+    cursor: url("hovercursor.png"), auto !important;
 }
 
 input:focus {
     outline: none;
   }
+
+select {
+    background-color: transparent !important;
+    color: white;
+    height: 2.5em;
+    cursor: url("hovercursor.png"), auto !important;
+    text-decoration: underline !important;
+    border: none !important;
+}
+
+select:disabled {
+    text-decoration: underline !important;
+}
 
 button:focus {outline:0 !important;}
 

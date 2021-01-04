@@ -1,15 +1,16 @@
 @import url("fonts.css");
 
+
 .App {
   margin: 0;
   padding: 0;
   text-align: center;
-  background-color: #000000;
+  background-color: #0c2847;
   min-height: 100vh;
   min-width: 100vw;
   height: 100%;
   width: 100%;
-  cursor: crosshair;
+  cursor: url("cursor.png"), auto !important;	
   color: white;
   font-family: 'LexiconNo2 RomanA-Txt';
 }
@@ -19,7 +20,7 @@ h1 {
 }
 
 ::selection{
-  background-color: rgba(170, 247, 253, 0.637);
+  background-color: rgba(253, 196, 170, 0.637);
 }
 
 

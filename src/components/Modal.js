@@ -74,6 +74,7 @@ const Edit = ({ todo }) => {
                 value={recipient}
                 onChange={e => setRecipient(e.target.value)}
                 placeholder="For Whom  ">
+                  <option value="" disabled selected>For Whom</option>
                   <option value="Joe">Joe</option>
                   <option value="Gavin">Gavin</option>
                   <option value="Olga">Olga</option>
