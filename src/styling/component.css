@@ -79,6 +79,7 @@ select {
     cursor: url("hovercursor.png"), auto !important;
     text-decoration: underline !important;
     border: none !important;
+    -webkit-appearance: none;
 }
 
 select:disabled {

@@ -3,6 +3,7 @@ import './styling/App.css';
 
 import InputTodo from './components/InputTodo';
 import ListTodos from './components/ListTodo';
+import FilterList from './components/FilterList';
 
 function App() {
   return (
@@ -13,13 +14,18 @@ function App() {
           3W
         </h1>
       </header>
-      <div>
-
+      <div className="grid-container">
+      <div className="grid-item">
       <InputTodo/>
+      <FilterList/>
+      </div>
+      <div className="grid-item">
       <ListTodos/>
+      </div>
+      </div>
       
     </div>
-    </div>
+    
     </Fragment>
   );
 }
