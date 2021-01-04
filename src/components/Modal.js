@@ -43,7 +43,7 @@ const Edit = ({ todo }) => {
     return (
       <Fragment>
         <button className={"buttonX"} onClick={handleShow}>
-          //
+        &#x270d;
         </button>
   
         <Modal show={show} onHide={handleClose}>

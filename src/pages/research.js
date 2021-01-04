@@ -5,7 +5,7 @@ import Header from '../components/Header'
 
 import InputResearch from '../components/InputResearch';
 import FilterResList from '../components/ListResearch';
-
+import ListRes from '../components/TableResearch';
 function Research() {
   return (
     <Fragment>
@@ -14,6 +14,7 @@ function Research() {
       <div className="grid-container">
       <div className="grid-item">
       <InputResearch/>
+      <ListRes/>
       </div>
       <div className="grid-item">
       <FilterResList/>

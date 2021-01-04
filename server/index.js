@@ -148,7 +148,7 @@ app.post("/res", async (req, res) => {
 
 app.get("/res", async (req, res) => {
   try {
-    const allTopics = await pool.query("SELECT * FROM research");
+    const allTopics = await pool.query("SELECT * FROM research WHERE complete = 'f'");
     res.json(allTopics.rows);
   } catch (err) {
     console.error(err.message);
@@ -170,6 +170,35 @@ app.get("/res/:id", async (req, res) => {
   }
 });
 
+app.put("/resx/:id", async (req, res) => {
+  try {
+    const {id}  = req.params;
+    const updateTopic = await pool.query(
+      "UPDATE research SET complete = 't' WHERE topic_id = $1",
+      [id]
+    );
+
+    res.json("Topic was completed!");
+  } catch (err) {
+    console.error(err.message);
+  }
+});
+
+
+
+//delete a todo
+
+app.delete("/res/:id", async (req, res) => {
+  try {
+    const { id } = req.params;
+    const deleteTopic = await pool.query("DELETE FROM research WHERE topic_id = $1", [
+      id
+    ]);
+    res.json("Topic was deleted!");
+  } catch (err) {
+    console.log(err.message);
+  }
+});
 
 
 app.listen(5000, () => {

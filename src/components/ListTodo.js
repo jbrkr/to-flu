@@ -90,7 +90,7 @@ const ListTodos = () => {
                    className={"buttonX"} 
                   onClick={() => completeTodo(todo.todo_id)}
                 >
-                  *
+                  &#x2714;
                 </button>
                 </td>
               <td>
