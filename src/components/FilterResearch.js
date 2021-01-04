@@ -27,23 +27,24 @@ const FilterResearch = () => {
       
     
       return (
-        <Fragment>
+        <div className="search" class="search">
         <input
           type="text"
           name="search"
           id="search"
           value={search}
           onChange={e => setSearch(e.target.value)}
-          placeholder="search"
+          placeholder="Search by Subject"
           />
-        <div>
+          <hr/>
+        
       {topics.filter(topic => topic.subj == search).map(filteredTopic => (
         <li>
           {filteredTopic.project}
         </li>
       ))}
-    </div>
-        </Fragment>
+    
+        </div>
         )
 
 };

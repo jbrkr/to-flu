@@ -14,7 +14,7 @@
   margin: 0;
   padding: 0;
   text-align: center;
-  background-color: #ebebd4;
+  background-color: white; /*#ebebd4*/
   min-height: 100vh;
   min-width: 100vw;
   height: 100vh;
@@ -23,7 +23,7 @@
   max-width: 100vw;
   cursor: url("cursor.png"), auto !important;	
   color: black;
-  font-family: 'LexiconNo2';
+  font-family: 'Untitled Sans';
 }
 
 h1 {
@@ -31,13 +31,13 @@ h1 {
 }
 
 ::selection{
-  background-color: rgba(253, 196, 170, 0.637);
+  background-color: black; /*rgba(253, 196, 170, 0.637)*/
 }
 
 .App-header {
   grid-area: header;
   padding: 5px 10px 5px 20px; /*top right bottom left*/
-  background-color: #7a4343;
+  background-color: black; /*#7a4343*/
   height: 10vh;
   display: grid;
   grid-template-columns: auto auto;

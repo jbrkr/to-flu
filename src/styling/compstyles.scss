@@ -6,8 +6,8 @@
     border-right: 1px solid black;
 
     h1 {
-        text-decoration: underline !important;
-        font-size: calc(1.5rem + 1.5vw);
+        
+        font-size: calc(1.7rem + 1.5vw);
     
     };
 
@@ -26,12 +26,12 @@
     border-right: 1px solid black !important;
     h2 {
     padding: 1em !important;
-    font-size: 1.25rem;
+    font-size: 1.45rem;
     };
     .tdl {height:66vh;border-right: none !important;};
     tr {height:50px; overflow:auto; max-height:100px;};
     .tdl, tr {
-        
+        font-size: 1.15rem;
         text-align: justify;
         font-family: 'Untitled Sans';
         color: black;
@@ -42,4 +42,21 @@
     th, td {
         padding: 15px;
       }
+}
+
+.search {
+
+    font-size: 2rem;
+
+    hr {
+        border: 0;
+        height: 1px;
+        background: black;
+        width: 100%;
+    };
+
+    li {
+        font-size: 1.5rem !important;
+        text-align: justify;
+    };
 }

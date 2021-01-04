@@ -23,7 +23,8 @@ const FilterTodo = () => {
       console.log(todos);
     
       return (
-        <Fragment>
+        
+        <div className="search" class="search">
         <select
           name="recipient"
           id="recipient"
@@ -36,7 +37,7 @@ const FilterTodo = () => {
           <option value="Yaniv">Yaniv</option>
           
     </select>
-        
+    <hr/>
         <div>
       {todos.filter(todo => todo.recipient == recipient).map(filteredTodo => (
         <li>
@@ -44,7 +45,8 @@ const FilterTodo = () => {
         </li>
       ))}
     </div>
-        </Fragment>
+    </div>
+    
         )
 
 };
