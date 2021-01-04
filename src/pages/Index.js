@@ -1,8 +1,13 @@
 import React, { Fragment } from 'react';
 import { Link } from 'react-router-dom';
+import '../styling/App.css';
+
+import Header from '../components/Header'
 
 const Index = () => (
   <Fragment>
+  <div className="App">
+    <Header/>
     <article id="index">
       <header>
         <div className="title">
@@ -19,6 +24,7 @@ const Index = () => (
       </p>
       <p> Source available <a href="https://github.com/jbrkr/to-flu">here</a>.</p>
     </article>
+    </div>
   </Fragment>
 );
 

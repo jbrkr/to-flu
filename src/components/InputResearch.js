@@ -30,7 +30,7 @@ const InputResearch = () => {
 
   return (
     <Fragment>
-      <h1>Todo Entry</h1>
+      <h1>Research Tracking</h1>
       <form onSubmit={onSubmitForm}>
         I need to learn &nbsp;
         <input

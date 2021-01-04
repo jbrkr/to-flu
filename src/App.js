@@ -1,6 +1,8 @@
 import React, {Fragment} from 'react';
 import './styling/App.css';
 
+import Header from './components/Header'
+
 import InputTodo from './components/InputTodo';
 import ListTodos from './components/ListTodo';
 import FilterList from './components/FilterList';
@@ -9,11 +11,7 @@ function App() {
   return (
     <Fragment>
     <div className="App">
-      <header className="App-header">
-        <h1>
-          3W
-        </h1>
-      </header>
+    <Header/>
       <div className="grid-container">
       <div className="grid-item">
       <InputTodo/>

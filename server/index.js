@@ -116,8 +116,8 @@ app.post("/res", async (req, res) => {
     const subj = req.body.subj;
     const project = req.body.project;
     const newResTopic = await pool.query(
-      "INSERT INTO research (topic, subj, project) VALUES($1, $2, $3) RETURNING *",
-      [topic, subj, project]
+      "INSERT INTO research (topic, subj, project, complete) VALUES($1, $2, $3, $4) RETURNING *",
+      [topic, subj, project, complete='f']
     );
 
     res.json(newResTopic.rows[0]);

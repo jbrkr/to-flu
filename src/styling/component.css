@@ -2,17 +2,16 @@
 
 .buttonX, button {
     background-color: transparent !important;
-    border: 2px solid white !important;
+    border: 2px solid black !important;
     border-radius: 0px !important;
-    color: white;
+    color: black;
     cursor: url("hovercursor.png"), auto !important;
 }
 
 button:hover {
-    background-color: white !important;
+    background-color: black !important;
     border-radius: 0px !important;
-    color: black !important;
-    
+    color: white !important;
 }
 
 
@@ -24,9 +23,10 @@ button:hover {
 
 .tdl, tr {
     text-align: justify;
-    min-height: 100vh;
+    min-height: 60vh;
     font-family: 'Untitled Sans';
-    color: white;
+    color: black;
+    border: 1px solid black;
 }
 
 h1 {
@@ -34,7 +34,7 @@ h1 {
   }
 
 ::placeholder {
-    color: white;
+    color: black;
     text-decoration: underline;
 }
 
@@ -45,7 +45,7 @@ h1 {
 
 input[type=text] {
       background-color: transparent !important;
-      color: white;
+      color: black;
       height: 2.5em;
       display: inline-block;
       min-width:50px !important;
@@ -55,7 +55,7 @@ input[type=text] {
 
 input[type=date] {
     background-color: transparent !important;
-    color: white;
+    color: black;
     height: 2.5em;
     width: 9em;
     cursor: url("hovercursor.png"), auto !important;
@@ -64,7 +64,7 @@ input[type=date] {
 }
 
 ::-webkit-calendar-picker-indicator {
-    filter: invert(1);
+    /*filter: invert(1);*/
     cursor: url("hovercursor.png"), auto !important;
 }
 
@@ -74,7 +74,7 @@ input:focus {
 
 select {
     background-color: transparent !important;
-    color: white;
+    color: black;
     height: 2.5em;
     cursor: url("hovercursor.png"), auto !important;
     text-decoration: underline !important;
@@ -101,5 +101,5 @@ Button:active {
     }
 
 .tdlist {
-    width: 50vw !important;
+    width: 40vw !important;
 }

@@ -40,11 +40,11 @@ const ListTodos = () => {
   return (
     <Fragment>
       {" "}
-      <div className={"tdlist"} style={{border: "1px solid red"}}>
+      <div className={"tdlist"}>
       <h2>Todos</h2>
-      <table id={"tdl"} className={"tdl"} class="table">
+      <table id={"tdl"} className={"tdl"} class="tdl">
       <colgroup>
-          <col style={{width:"18%"}}/>
+          <col style={{width:"14%"}}/>
 	        <col style={{width:"8%"}}/>
 	        <col style={{width:"4%"}}/>
           <col style={{width:"2%"}}/>

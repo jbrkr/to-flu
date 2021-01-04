@@ -7,7 +7,8 @@ CREATE TABLE todo(
 
 ALTER TABLE todo
 ADD COLUMN due_date DATE,
-ADD COLUMN recipient VARCHAR(30);
+ADD COLUMN recipient VARCHAR(30)
+ADD COLUMN complete BOOLEAN;
 
 
 CREATE TABLE research(
@@ -16,3 +17,6 @@ CREATE TABLE research(
     subj VARCHAR(255),
     project VARCHAR(255)
 );
+
+ALTER TABLE research
+ADD COLUMN complete BOOLEAN;
