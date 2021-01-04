@@ -3,6 +3,20 @@ import '../styling/component.css';
 import $ from 'jquery'; 
 
 
+function resizable (el, factor) {
+  var int = Number(factor) || 17.7;
+  function resize() {el.style.width = ((el.value.length+1) * int) + 'px'}
+  var e = 'keyup,keypress,focus,blur,change'.split(',');
+  for (var i in e) el.addEventListener(e[i],resize,false);
+  resize();
+}
+
+
+window.onload=function(){
+  resizable(document.getElementById('description'),7.35);
+}
+/*
+
 function resizeInput() {
   $(this).attr('size', $(this).val().length);
 }
@@ -12,6 +26,7 @@ $('input[type="text"]')
   .keyup(resizeInput)
   // resize on page load
   .each(resizeInput);
+*/
 
 const InputTodo = () => {
   const [description, setDescription] = useState("");
@@ -50,9 +65,7 @@ const InputTodo = () => {
           id="description"
           value={description}
           onChange={e => setDescription(e.target.value)}
-          placeholder="What"
-          onkeypress="this.style.width = ((this.value.length + 1) * 8) + 'px';"
-        />
+          placeholder="What"/>
         by &nbsp;
         <input
           type="date"

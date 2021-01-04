@@ -47,7 +47,8 @@ input[type=text] {
       background-color: transparent !important;
       color: white;
       height: 2.5em;
-      width: 4em;
+      display: inline-block;
+      min-width:50px !important;
       cursor: url("hovercursor.png"), auto !important;
       border: none !important;
   }
