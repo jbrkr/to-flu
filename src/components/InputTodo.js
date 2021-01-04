@@ -10,7 +10,7 @@ const InputTodo = () => {
   const onSubmitForm = async (e) => {
     e.preventDefault();
     try {
-    {/*const body = { description };*/}
+
       const response = await fetch("http://localhost:5000/todos", {
         method: "POST",
         headers: { "content-type": "application/json" },
@@ -48,16 +48,21 @@ const InputTodo = () => {
           onChange={e => setDueDate(e.target.value)}
           placeholder="When"
         />
-        <input
-          type="text"
+        <select
           name="recipient"
           id="recipient"
           value={recipient}
           onChange={e => setRecipient(e.target.value)}
-          placeholder="For Whom  "
-        />
-        <button className={"buttonX"} >Add</button>
+          placeholder="For Whom  ">
+          <option value="Joe">Joe</option>
+          <option value="Gavin">Gavin</option>
+          <option value="Olga">Olga</option>
+          <option value="Yaniv">Yaniv</option>
+          <option value="Ara">Ara</option>
+    </select>
+        <button className={"buttonX"}>Add</button>
       </form>
+      <br/>
     </Fragment>
   );
 };

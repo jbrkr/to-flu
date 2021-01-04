@@ -42,9 +42,9 @@ const Edit = ({ todo }) => {
   
     return (
       <Fragment>
-        <Button className={"buttonX"} onClick={handleShow}>
+        <button className={"buttonX"} onClick={handleShow}>
           //
-        </Button>
+        </button>
   
         <Modal show={show} onHide={handleClose}>
           <Modal.Header className={"editorModal"}>
@@ -67,14 +67,19 @@ const Edit = ({ todo }) => {
                 value={due_date}
                 onChange={e => setDueDate(e.target.value)}
               />
-              <input
-                type="text"
+              <select
                 className="form-control"
                 name="recipient"
                 id="recipient"
                 value={recipient}
                 onChange={e => setRecipient(e.target.value)}
-              />
+                placeholder="For Whom  ">
+                  <option value="Joe">Joe</option>
+                  <option value="Gavin">Gavin</option>
+                  <option value="Olga">Olga</option>
+                  <option value="Yaniv">Yaniv</option>
+                  <option value="Ara">Ara</option>
+              </select>
               </Modal.Body>
           <Modal.Footer className={"editorModal"} >
             <Button className={"buttonX"} onClick={handleClose}>
