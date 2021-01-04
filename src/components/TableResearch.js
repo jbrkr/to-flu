@@ -7,7 +7,7 @@ import '../styling/compstyles.scss';
   
     const completeTopic = async id => {
       try {
-        const completeTopic = await fetch(`http://localhost:5000/resx/${id}`, {
+        const completeTopic = await fetch(`ec2-52-22-135-159.compute-1.amazonaws.com/resx/${id}`, {
           method: "PUT"
         });
   
@@ -21,7 +21,7 @@ import '../styling/compstyles.scss';
   
     const deleteTopic = async id => {
       try {
-        const deleteTopic = await fetch(`http://localhost:5000/res/${id}`, {
+        const deleteTopic = await fetch(`ec2-52-22-135-159.compute-1.amazonaws.com/res/${id}`, {
           method: "DELETE"
         });
   
@@ -33,7 +33,7 @@ import '../styling/compstyles.scss';
   
     const getTopics = async () => {
       try {
-        const response = await fetch("http://localhost:5000/res");
+        const response = await fetch("ec2-52-22-135-159.compute-1.amazonaws.com/res");
         const jsonData = await response.json();
   
         setTopics(jsonData);

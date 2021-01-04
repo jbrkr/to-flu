@@ -10,7 +10,7 @@ const TableTodo = () => {
 
   const completeTodo = async id => {
     try {
-      const completeTodo = await fetch(`http://localhost:5000/todosx/${id}`, {
+      const completeTodo = await fetch(`ec2-52-22-135-159.compute-1.amazonaws.com/todosx/${id}`, {
         method: "PUT"
       });
 
@@ -24,7 +24,7 @@ const TableTodo = () => {
 
   const deleteTodo = async id => {
     try {
-      const deleteTodo = await fetch(`http://localhost:5000/todos/${id}`, {
+      const deleteTodo = await fetch(`ec2-52-22-135-159.compute-1.amazonaws.com/todos/${id}`, {
         method: "DELETE"
       });
 
@@ -36,7 +36,7 @@ const TableTodo = () => {
 
   const getTodos = async () => {
     try {
-      const response = await fetch("http://localhost:5000/todos");
+      const response = await fetch("ec2-52-22-135-159.compute-1.amazonaws.com/todos");
       const jsonData = await response.json();
 
       setTodos(jsonData);

@@ -9,7 +9,7 @@ const FilterResearch = () => {
 
     const getTopics = async () => {
         try {
-          const response = await fetch("http://localhost:5000/res");
+          const response = await fetch("ec2-52-22-135-159.compute-1.amazonaws.com/res");
           const jsonData = await response.json();
     
           setTopics(jsonData);

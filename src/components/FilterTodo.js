@@ -7,7 +7,7 @@ const FilterTodo = () => {
 
     const getTodos = async () => {
         try {
-          const response = await fetch("http://localhost:5000/todos");
+          const response = await fetch("ec2-52-22-135-159.compute-1.amazonaws.com/todos");
           const jsonData = await response.json();
     
           setTodos(jsonData);
