@@ -1,6 +1,17 @@
 import React, { Fragment, useState } from "react";
 import '../styling/component.css';
+import $ from 'jquery'; 
 
+
+function resizeInput() {
+  $(this).attr('size', $(this).val().length);
+}
+
+$('input[type="text"]')
+  // event handler
+  .keyup(resizeInput)
+  // resize on page load
+  .each(resizeInput);
 
 const InputTodo = () => {
   const [description, setDescription] = useState("");
@@ -32,6 +43,7 @@ const InputTodo = () => {
     <Fragment>
       <h1>Todo Entry</h1>
       <form onSubmit={onSubmitForm}>
+        I need to finish &nbsp;
         <input
           type="text"
           name="description"
@@ -39,7 +51,9 @@ const InputTodo = () => {
           value={description}
           onChange={e => setDescription(e.target.value)}
           placeholder="What"
+          onkeypress="this.style.width = ((this.value.length + 1) * 8) + 'px';"
         />
+        by &nbsp;
         <input
           type="date"
           name="due_date"
@@ -48,12 +62,14 @@ const InputTodo = () => {
           onChange={e => setDueDate(e.target.value)}
           placeholder="When"
         />
+        &nbsp; for &nbsp;
         <select
           name="recipient"
           id="recipient"
           value={recipient}
           onChange={e => setRecipient(e.target.value)}
           placeholder="For Whom  ">
+          <option value="" disabled="disabled">Whom</option>
           <option value="Joe">Joe</option>
           <option value="Gavin">Gavin</option>
           <option value="Olga">Olga</option>

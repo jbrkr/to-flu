@@ -46,7 +46,7 @@ const ListTodos = () => {
       <colgroup>
           <col style={{width:"18%"}}/>
 	        <col style={{width:"8%"}}/>
-	        <col style={{width:"8%"}}/>
+	        <col style={{width:"4%"}}/>
           <col style={{width:"2%"}}/>
 	        <col style={{width:"2%"}}/>
           </colgroup>
