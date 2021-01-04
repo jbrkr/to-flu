@@ -1,5 +1,7 @@
 import React, { Fragment, useState } from "react";
 import '../styling/component.css';
+import '../styling/compstyles.scss';
+
 import $ from 'jquery'; 
 
 
@@ -57,6 +59,7 @@ const InputTodo = () => {
 
   return (
     <Fragment>
+    <div className="formInput">
       <h1>Todo Entry</h1>
       <form onSubmit={onSubmitForm}>
         I need to finish &nbsp;
@@ -90,9 +93,11 @@ const InputTodo = () => {
           <option value="Yaniv">Yaniv</option>
           <option value="Ara">Ara</option>
     </select>
+    
         <button className={"buttonX"}>Add</button>
       </form>
-      <br/>
+      
+      </div>
     </Fragment>
   );
 };

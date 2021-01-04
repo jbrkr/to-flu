@@ -21,13 +21,7 @@ button:hover {
     border-radius: 0px !important;
 }
 
-.tdl, tr {
-    text-align: justify;
-    min-height: 60vh;
-    font-family: 'Untitled Sans';
-    color: black;
-    border: 1px solid black;
-}
+
 
 h1 {
     font-size: 3em !important;
@@ -100,6 +94,5 @@ Button:active {
     border: none;
     }
 
-.tdlist {
-    width: 40vw !important;
-}
+
+

@@ -1,9 +1,11 @@
 import React, { Fragment, useEffect, useState } from "react";
 import '../styling/component.css';
+import '../styling/compstyles.scss';
+
 
 import Edit from './Modal';
 
-const ListTodos = () => {
+const TableTodo = () => {
   const [todos, setTodos] = useState([]);
 
   const completeTodo = async id => {
@@ -50,27 +52,27 @@ const ListTodos = () => {
   console.log(todos);
 
   return (
-    <Fragment>
-      {" "}
-      <div className={"tdlist"}>
+    
+      
+      <div className="tdlist" class="tdlist">
       <h2>Todos</h2>
       <table id={"tdl"} className={"tdl"} class="tdl">
       <colgroup>
           <col style={{width:"14%"}}/>
 	        <col style={{width:"8%"}}/>
 	        <col style={{width:"4%"}}/>
-          <col style={{width:"2%"}}/>
-	        <col style={{width:"2%"}}/>
-          <col style={{width:"2%"}}/>
+          <col style={{width:"1%"}}/>
+	        <col style={{width:"1%"}}/>
+          <col style={{width:"1%"}}/>
           </colgroup>
         <thead>
           <tr style={{borderColor: "black"}}>
             <th>What</th>
             <th>When</th>
             <th>For Whom</th>
-            <th>Complete</th>
-            <th>Edit</th>
-            <th>Delete</th>
+            <th></th>
+            <th></th>
+            <th></th>
           </tr>
         </thead>
         <tbody>
@@ -109,8 +111,8 @@ const ListTodos = () => {
         </tbody>
       </table>
       </div>
-    </Fragment>
+    
   );
 };
 
-export default ListTodos;
+export default TableTodo;

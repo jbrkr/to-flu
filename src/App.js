@@ -4,8 +4,8 @@ import './styling/App.css';
 import Header from './components/Header'
 
 import InputTodo from './components/InputTodo';
-import ListTodos from './components/ListTodo';
-import FilterList from './components/FilterList';
+import TableTodo from './components/TableTodo';
+import FilterTodo from './components/FilterTodo';
 
 function App() {
   return (
@@ -15,10 +15,10 @@ function App() {
       <div className="grid-container">
       <div className="grid-item">
       <InputTodo/>
-      <FilterList/>
+      <FilterTodo/>
       </div>
       <div className="grid-item">
-      <ListTodos/>
+      <TableTodo/>
       </div>
       </div>
       

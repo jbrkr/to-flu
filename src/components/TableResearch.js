@@ -1,9 +1,8 @@
 import React, { Fragment, useEffect, useState } from "react";
 import '../styling/component.css';
+import '../styling/compstyles.scss';
   
-
-  
-  const ListRes = () => {
+  const TableResearch = () => {
     const [topics, setTopics] = useState([]);
   
     const completeTopic = async id => {
@@ -50,11 +49,9 @@ import '../styling/component.css';
     console.log(topics);
   
     return (
-      <Fragment>
-        {" "}
-        <div className={"tdlist"}>
-        <h2>topics</h2>
-        <table id={"tdl"} className={"tdl"} class="tdl">
+        <div className="tdlist" class="tdlist">
+        <h2>Topics</h2>
+        <table id={"tdl"} className="tdl" class="tdl">
         <colgroup>
             <col style={{width:"14%"}}/>
               <col style={{width:"8%"}}/>
@@ -104,8 +101,7 @@ import '../styling/component.css';
           </tbody>
         </table>
         </div>
-      </Fragment>
     );
   };
   
-  export default ListRes;
+  export default TableResearch;

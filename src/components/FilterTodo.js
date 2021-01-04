@@ -1,7 +1,7 @@
 import React, { Fragment, useEffect, useState } from "react";
 import '../styling/component.css';
 
-const FilterList = () => {
+const FilterTodo = () => {
     const [recipient, setRecipient] = useState("Ara");
     const [todos, setTodos] = useState([]);
 
@@ -50,4 +50,4 @@ const FilterList = () => {
 };
 
 
-export default FilterList;
+export default FilterTodo;

@@ -6,14 +6,21 @@
 }
 
 .App {
+  display: grid;
+  grid-template-areas: 'header'
+                       'main';
+  grid-template-columns: 1fr;
+  grid-template-rows: auto 1fr;
   margin: 0;
   padding: 0;
   text-align: center;
   background-color: #ebebd4;
   min-height: 100vh;
   min-width: 100vw;
-  height: 100%;
-  width: 100%;
+  height: 100vh;
+  width: 100vw;
+  max-height: 100vh;
+  max-width: 100vw;
   cursor: url("cursor.png"), auto !important;	
   color: black;
   font-family: 'LexiconNo2';
@@ -28,10 +35,10 @@ h1 {
 }
 
 .App-header {
+  grid-area: header;
   padding: 5px 10px 5px 20px; /*top right bottom left*/
-  margin-bottom: 20px;
   background-color: #7a4343;
-  max-height: 40vh;
+  height: 10vh;
   display: grid;
   grid-template-columns: auto auto;
   grid-column-gap: 50px;
@@ -41,10 +48,10 @@ h1 {
   color: white;
 }
 
-.td-entry{
+/*.td-entry{
   padding: 10;
   border: 1px solid #000;
-}
+}*/
 
 
 a {

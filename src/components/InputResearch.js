@@ -1,5 +1,7 @@
 import React, { Fragment, useState } from "react";
 import '../styling/component.css';
+import '../styling/compstyles.scss';
+
 import $ from 'jquery'; 
 
 const InputResearch = () => {
@@ -29,7 +31,7 @@ const InputResearch = () => {
   };
 
   return (
-    <Fragment>
+    <div className="formInput">
       <h1>Research Tracking</h1>
       <form onSubmit={onSubmitForm}>
         I need to learn &nbsp;
@@ -58,8 +60,7 @@ const InputResearch = () => {
           placeholder="Project"/>
         <button className={"buttonX"}>Add</button>
       </form>
-      <br/>
-    </Fragment>
+      </div>
   );
 };
 

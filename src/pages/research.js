@@ -4,8 +4,8 @@ import '../styling/App.css';
 import Header from '../components/Header'
 
 import InputResearch from '../components/InputResearch';
-import FilterResList from '../components/ListResearch';
-import ListRes from '../components/TableResearch';
+import FilterResearch from '../components/FilterResearch';
+import TableResearch from '../components/TableResearch';
 function Research() {
   return (
     <Fragment>
@@ -14,10 +14,10 @@ function Research() {
       <div className="grid-container">
       <div className="grid-item">
       <InputResearch/>
-      <ListRes/>
+      <TableResearch/>
       </div>
       <div className="grid-item">
-      <FilterResList/>
+      <FilterResearch/>
       </div>
       </div>
     </div>

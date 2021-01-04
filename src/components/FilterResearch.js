@@ -1,8 +1,9 @@
 import React, { Fragment, useEffect, useState } from "react";
 import '../styling/component.css';
+import '../styling/compstyles.scss';
 
 
-const FilterResList = () => {
+const FilterResearch = () => {
     const [topics, setTopics] = useState([]);
     const [search, setSearch] = useState("");
 
@@ -48,4 +49,4 @@ const FilterResList = () => {
 };
 
 
-export default FilterResList;
+export default FilterResearch;

@@ -4,25 +4,23 @@ import '../styling/App.css';
 import Header from '../components/Header'
 
 import InputTodo from '../components/InputTodo';
-import ListTodos from '../components/ListTodo';
-import FilterList from '../components/FilterList';
+import TableTodo from '../components/TableTodo';
+import FilterTodo from '../components/FilterTodo';
 
 function ProjectMgmt() {
   return (
-    <Fragment>
     <div className="App">
       <Header/>
       <div className="grid-container">
       <div className="grid-item">
       <InputTodo/>
-      <FilterList/>
+      <TableTodo/>
       </div>
       <div className="grid-item">
-      <ListTodos/>
+      <FilterTodo/>
       </div>
       </div>
     </div>
-    </Fragment>
   );
 }
 
