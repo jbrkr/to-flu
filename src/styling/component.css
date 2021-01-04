@@ -7,32 +7,36 @@
     color: white;
 }
 
+.editorModal {
+    background-color: black;
+    border: white;
+    border-radius: 0px !important;
+}
+
 .tdl, tr {
     text-align: justify;
     border: 1px solid black;
-    
     min-height: 100vh;
-    min-width: 100vw;
-
     font-family: 'Untitled Sans';
     color: white;
 }
 
 table {
+    align-items: center;
+    align-content: center;
     border: 1px solid black;
+    min-width: 50vw;
+    max-width: 50vw;
+    width: 50vw;
 }
-
 
 h1 {
     font-size: 3em !important;
   }
 
-
-
   input[type=text] {
       background-color: transparent !important;
       color: white;
-
   }
 
   input[type=date] {
@@ -40,14 +44,24 @@ h1 {
     color: white;
 }
 
-
 input:focus {
     outline: none;
   }
 
+button:focus {outline:0 !important;}
 
+Button:focus {outline:0;}
 
-.editorModal {
-    background-color: black;
-    border: white;
+button:active {
+    outline: none !important;
+    border: none;
+    }
+
+Button:active {
+    outline: none;
+    border: none;
+    }
+
+.tdlist {
+    width: 50vw !important;
 }
