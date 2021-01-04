@@ -128,6 +128,30 @@ app.post("/res", async (req, res) => {
 });
 
 
+app.get("/res", async (req, res) => {
+  try {
+    const allTopics = await pool.query("SELECT * FROM research");
+    res.json(allTopics.rows);
+  } catch (err) {
+    console.error(err.message);
+  }
+});
+
+//get a todo
+
+app.get("/res/:id", async (req, res) => {
+  try {
+    const { id } = req.params;
+    const research = await pool.query("SELECT * FROM research WHERE topic_id = $1", [
+      id
+    ]);
+
+    res.json(research.rows[0]);
+  } catch (err) {
+    console.error(err.message);
+  }
+});
+
 
 
 app.listen(5000, () => {
