@@ -6,6 +6,18 @@ import Edit from './Modal';
 const ListTodos = () => {
   const [todos, setTodos] = useState([]);
 
+  const completeTodo = async id => {
+    try {
+      const completeTodo = await fetch(`http://localhost:5000/todosx/${id}`, {
+        method: "PUT"
+      });
+
+      setTodos(todos.filter(todo => todo.todo_id !== id));
+    } catch (err) {
+      console.error(err.message);
+    }
+  };
+
   //delete todo function
 
   const deleteTodo = async id => {
@@ -49,12 +61,14 @@ const ListTodos = () => {
 	        <col style={{width:"4%"}}/>
           <col style={{width:"2%"}}/>
 	        <col style={{width:"2%"}}/>
+          <col style={{width:"2%"}}/>
           </colgroup>
         <thead>
           <tr style={{borderColor: "black"}}>
             <th>What</th>
             <th>When</th>
             <th>For Whom</th>
+            <th>Complete</th>
             <th>Edit</th>
             <th>Delete</th>
           </tr>
@@ -69,7 +83,16 @@ const ListTodos = () => {
             <tr key={todo.todo_id}  style={{borderColor: "black"}}>
               <td>{todo.description}</td>
               <td>{String(todo.due_date).split('T')[0]}</td>
+              
               <td>{todo.recipient}</td>
+              <td>
+                <button
+                   className={"buttonX"} 
+                  onClick={() => completeTodo(todo.todo_id)}
+                >
+                  *
+                </button>
+                </td>
               <td>
                 <Edit todo={todo} />
               </td>
