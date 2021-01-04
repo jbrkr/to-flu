@@ -105,6 +105,31 @@ app.delete("/todos/:id", async (req, res) => {
   }
 });
 
+//
+// Research
+//
+
+
+app.post("/res", async (req, res) => {
+  try {
+    const topic = req.body.topic;
+    const subj = req.body.subj;
+    const project = req.body.project;
+    const newResTopic = await pool.query(
+      "INSERT INTO research (topic, subj, project) VALUES($1, $2, $3) RETURNING *",
+      [topic, subj, project]
+    );
+
+    res.json(newResTopic.rows[0]);
+    console.log(res);
+  } catch (err) {
+    console.error(err.message);
+  }
+});
+
+
+
+
 app.listen(5000, () => {
   console.log("server has started on port 5000");
 });
