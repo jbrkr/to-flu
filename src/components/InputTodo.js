@@ -2,9 +2,6 @@ import React, { Fragment, useState } from "react";
 import '../styling/component.css';
 import '../styling/compstyles.scss';
 
-import $ from 'jquery'; 
-
-
 function resizable (el, factor) {
   var int = Number(factor) || 17.7;
   function resize() {el.style.width = ((el.value.length+1) * int) + 'px'}
@@ -14,22 +11,9 @@ function resizable (el, factor) {
   resize();
 }}
 
-
 window.onload=function(){
   resizable(document.getElementById('description'),7.35);
 }
-/*
-
-function resizeInput() {
-  $(this).attr('size', $(this).val().length);
-}
-
-$('input[type="text"]')
-  // event handler
-  .keyup(resizeInput)
-  // resize on page load
-  .each(resizeInput);
-*/
 
 const InputTodo = () => {
   const [description, setDescription] = useState("");
