@@ -12,10 +12,6 @@ const Index = () => (
       <header>
         <div className="title">
           <h2 data-testid="heading"><Link to="/">About this site</Link></h2>
-          <p>
-            A beautiful, responsive, statically-generated,
-            react application written with modern Javascript.
-          </p>
         </div>
       </header>
       <p> Welcome to 3W, which is built for both {' '}
